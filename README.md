@@ -1,2 +1,2 @@
-# Visual_Light_Communication
+# Visual Light Communication
 final project (C++ version)
