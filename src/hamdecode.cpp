@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<string.h>
+#include<string>
 
 int decoder(char*);
 int findint(char*);
@@ -9,7 +10,7 @@ void hamming(int, char*);
 
 int main(){
 	char bts[12];
-	hamming(149,bts);
+	hamming(61,bts);
 
 	int ans = decoder(bts);
 	std::cout << ans << std::endl;
@@ -73,4 +74,6 @@ void hamming(int input_num, char* output_bits){
         if(errcorr & 1) output_bits[r[3-i]] = '1';
         errcorr = errcorr >> 1;
     }
+    std::string outstring = str(output_bits,12);
+    std::cout << "Encoded hamming: " << outstring << std::endl;
 }
